@@ -21,7 +21,10 @@ def main():
             elif choice == '3':
                 print(num1, "*", num2, "=", ops.multiply(num1, num2))
             elif choice == '4':
-                print(num1, "/", num2, "=", ops.divide(num1, num2))
+                try:
+                    print(num1, "/", num2, "=", ops.divide(num1, num2))
+                except ZeroDivisionError:
+                    print("0으로 나누면 안됩니다.")
             redo = input("또 계산하겠습니까? (y/n): ")
             if redo == "n":
                 print("종료합니다.")
